@@ -508,7 +508,6 @@ body:not(.user-is-tabbing) a:focus {
 
 .about__text {
     flex:1;
-    margin-left 20px;
 }
 
 @media(max-width: 900px) {
@@ -519,6 +518,8 @@ body:not(.user-is-tabbing) a:focus {
 
 .about__photo-container {
     flex: 1;
+    display: flex;
+    align-items: center;
     margin-bottom: var(--gutter-normal);
 }
 
@@ -526,6 +527,10 @@ body:not(.user-is-tabbing) a:focus {
     .about__text {
         flex: 1
         margin-left: 0;
+
+    .about__photo-container {
+        margin-right: 0;
+        margin-bottom: 20px;
     }
 }
 
