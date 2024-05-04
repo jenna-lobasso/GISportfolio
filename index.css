@@ -508,13 +508,18 @@ body:not(.user-is-tabbing) a:focus {
 
 .about__text {
     flex:1;
-    margin-left: var(--gutter-huge)
+    margin-left: var(--gutter-huge);
+    margin-right: var(--gutter-normal);
 }
 
 @media(max-width: 900px) {
     .about__content {
         flex-direction: column;
     }
+
+    .about__text {
+        margin-right: 0;
+        margin-bottom: var(--gutter-normal);
 }
 
 .about__photo-container {
@@ -531,7 +536,6 @@ body:not(.user-is-tabbing) a:focus {
 
     .about__photo-container {
         margin-right: var(--gutter-normal);
-        margin-bottom: var(--gutter-normal);
     }
 }
 
