@@ -508,7 +508,7 @@ body:not(.user-is-tabbing) a:focus {
 
 .about__text {
     flex:1;
-    margin-left: var(--gutter-normal)
+    margin-left: var(--gutter-huge)
 }
 
 @media(max-width: 900px) {
@@ -521,7 +521,7 @@ body:not(.user-is-tabbing) a:focus {
     flex: 1;
     display: flex;
     align-items: center;
-    margin-right: var(--gutter-normal);
+    margin-right: var(--gutter-huge);
 }
 
 @media(min-width: 901px) {
