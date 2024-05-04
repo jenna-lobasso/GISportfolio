@@ -506,6 +506,11 @@ body:not(.user-is-tabbing) a:focus {
     flex-direction: row;
 }
 
+.about__text {
+    flex:1;
+    margin-left 20px;
+}
+
 @media(max-width: 900px) {
     .about__content {
         flex-direction: column;
@@ -519,7 +524,8 @@ body:not(.user-is-tabbing) a:focus {
 
 @media(min-width: 901px) {
     .about__text {
-        flex: 1;
+        flex: 1
+        margin-left: 0;
     }
 }
 
