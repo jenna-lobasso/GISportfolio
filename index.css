@@ -504,21 +504,13 @@ body:not(.user-is-tabbing) a:focus {
 .about__content {
     display: flex;
     flex-direction: row;
-}
-
-.about__text {
-    flex:1;
-    margin-left: var(--gutter-huge);
+    align-items: center;
 }
 
 @media(max-width: 900px) {
     .about__content {
         flex-direction: column;
-    }
-
-    .about__text {
-        margin-left: var(--gutter-huge);
-        margin-bottom: var(--gutter-normal);
+        align-items: initial;
     }
 }
 
@@ -537,6 +529,7 @@ body:not(.user-is-tabbing) a:focus {
     }
 
     .about__photo-container {
+        flex: 1;
         margin-right: var(--gutter-normal);
     }
 }
