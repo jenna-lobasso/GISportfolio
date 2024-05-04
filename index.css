@@ -540,7 +540,7 @@ body:not(.user-is-tabbing) a:focus {
     flex-direction: row;
 }
 
-@media(max-width: 1500px) {
+@media(max-width: 900px) {
     .about__content {
         flex-direction: column-reverse;
         align-items: initial;
@@ -561,7 +561,7 @@ body:not(.user-is-tabbing) a:focus {
     }
 
     .about__photo {
-        width: 100%;
+        width: 50%;
         height: auto;
         display: block;
     }
