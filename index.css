@@ -289,7 +289,7 @@ body:not(.user-is-tabbing) a:focus {
 .link__text:hover::after,
 .link__text:focus:after {
     right: 0;
-    background: var(--brown);
+    background: var(--white);
 }
 
 .link__text span {
@@ -390,7 +390,7 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .nav__link:hover {
-    color: var(--brown);
+    color: var(--white);
 }
 
 .nav__link:hover::after {
