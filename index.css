@@ -217,8 +217,8 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .btn {
-    background-color: var(--white);
-    color: var(--brown);
+    background-color: var(--brown);
+    color: var(--white);
     position: relative;
     display: inline-block;
     padding: 1rem 4.2rem;
@@ -248,8 +248,8 @@ body:not(.user-is-tabbing) a:focus {
 .btn:hover::after,
 .btn:focus::after {
     right: 0;
-    background: var(--brown);
-    color: var(--white);
+    background: var(--white);
+    color: var(--brown);
 }
 
 .btn--brown {
