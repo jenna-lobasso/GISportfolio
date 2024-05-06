@@ -217,6 +217,8 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .btn {
+    background-color: var(--white);
+    color: var(--brown);
     position: relative;
     display: inline-block;
     padding: 1rem 4.2rem;
@@ -247,6 +249,7 @@ body:not(.user-is-tabbing) a:focus {
 .btn:focus::after {
     right: 0;
     background: var(--brown);
+    color: var(--white);
 }
 
 .btn--brown {
