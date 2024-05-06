@@ -35,7 +35,7 @@
     --line-height-small: 1.2;
 
     --black: #000000;
-    --yellow: #fffdd0;
+    --brown: #5C4033;
     --white: #f0e9f2;
     --white-1: #faf9f6;
 
@@ -150,7 +150,7 @@ h2::after {
     display: block;
     height: 2px;
     width: 10rem;
-    background: var(--yellow);
+    background: var(--brown);
     margin: var(--gutter-small) 0;
 }
 
@@ -201,7 +201,7 @@ a {
 
 button:focus,
 a:focus {
-    outline: 2px solid var(--yellow);
+    outline: 2px solid var(--brown);
 }
 
 body:not(.user-is-tabbing) button:focus,
@@ -210,7 +210,7 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .link:hover {
-    color: var(--yellow);
+    color: var(--brown);
 }
 
 .btn {
@@ -219,7 +219,7 @@ body:not(.user-is-tabbing) a:focus {
     padding: 1rem 4.2rem;
     text-decoration: none;
     color: inherit;
-    border: 1px solid  var(--yellow);
+    border: 1px solid  var(--brown);
     font-weight: 400;
 }
 
@@ -243,20 +243,20 @@ body:not(.user-is-tabbing) a:focus {
 .btn:hover::after,
 .btn:focus::after {
     right: 0;
-    background: var(--yellow);
+    background: var(--brown);
 }
 
-.btn--yellow {
-    background: var(--yellow);
+.btn--brown {
+    background: var(--brown);
     transition: all 0.2s;
 }
 
-.btn--yellow::after {
+.btn--brown::after {
     display: none;
 }
 
-.btn--yellow:hover,
-.btn--yellow:focus {
+.btn--brown:hover,
+.btn--brown:focus {
     background: transparent;
 }
 
@@ -266,7 +266,7 @@ body:not(.user-is-tabbing) a:focus {
     padding: .6rem;
     color: inherit;
     text-decoration: none;
-    border-bottom: 1px solid var(--yellow);
+    border-bottom: 1px solid var(--brown);
 }
 
 .link__text::after {
@@ -289,7 +289,7 @@ body:not(.user-is-tabbing) a:focus {
 .link__text:hover::after,
 .link__text:focus:after {
     right: 0;
-    background: var(--yellow);
+    background: var(--brown);
 }
 
 .link__text span {
@@ -308,7 +308,7 @@ body:not(.user-is-tabbing) a:focus {
     align-items: center;
     height: 5.5rem;
     width: 5.5rem;
-    background-color: var(--yellow);
+    background-color: var(--brown);
     border-radius: 50%;
     z-index: 10;
     visibility: hidden;
@@ -390,13 +390,13 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .nav__link:hover {
-    color: var(--yellow);
+    color: var(--brown);
 }
 
 .nav__link:hover::after {
     right: 0;
     height: 2px;
-    background: var(--yellow);
+    background: var(--brown);
 }
 
 /* --------------------------------------- */
