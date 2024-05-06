@@ -217,15 +217,20 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .btn {
-    background-color: var(--brown);
-    color: var(--white);
     position: relative;
     display: inline-block;
     padding: 1rem 4.2rem;
     text-decoration: none;
-    color: inherit;
+    color: var(--white);
     border: 1px solid  var(--brown);
     font-weight: 400;
+    background-color: var(--brown);
+    transition: all 02s;
+}
+
+.btn:hover {
+    color: var(--brown);
+    background-color: transparent;
 }
 
 .btn:focus {
@@ -239,7 +244,7 @@ body:not(.user-is-tabbing) a:focus {
     top: 0;
     left: 0;
     right: 100%;
-    background: var(--brown);
+    background: var(--white);
     height: 100%;
     z-index: -1;
     transition: all 0.2s cubic-bezier(1, 0.68, 0.16, 0.9);
@@ -248,22 +253,18 @@ body:not(.user-is-tabbing) a:focus {
 .btn:hover::after,
 .btn:focus::after {
     right: 0;
-    background: var(--white);
-    color: var(--brown);
+    background: var(--brown);
+    color: var(--white);
 }
 
 .btn--brown {
     background: var(--brown);
-    transition: all 0.2s;
-}
-
-.btn--brown::after {
-    display: none;
 }
 
 .btn--brown:hover,
 .btn--brown:focus {
     background: transparent;
+    color: var(--brown)
 }
 
 .link__text {
