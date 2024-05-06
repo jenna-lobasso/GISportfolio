@@ -261,6 +261,11 @@ body:not(.user-is-tabbing) a:focus {
     background: var(--brown);
 }
 
+.btn--brown::after {
+    color: var(--white);
+    background: transparent;
+}
+
 .btn--brown:hover,
 .btn--brown:focus {
     background: transparent;
