@@ -34,8 +34,8 @@
     --line-height-normal: 1.7;
     --line-height-small: 1.2;
 
-    --black: #000;
-    --yellow: #ffffe0;
+    --black: #000000;
+    --yellow: #fffdd0;
     --white: #f0e9f2;
     --white-1: #faf9f6;
 
@@ -246,17 +246,17 @@ body:not(.user-is-tabbing) a:focus {
     background: var(--yellow);
 }
 
-.btn--pink {
+.btn--yellow {
     background: var(--yellow);
     transition: all 0.2s;
 }
 
-.btn--pink::after {
+.btn--yellow::after {
     display: none;
 }
 
-.btn--pink:hover,
-.btn--pink:focus {
+.btn--yellow:hover,
+.btn--yellow:focus {
     background: transparent;
 }
 
