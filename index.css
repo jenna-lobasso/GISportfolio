@@ -120,12 +120,15 @@ img {
 /* --------------------------------------- */
 
 h1,
+.headin-primary {
+    color: var(--brown);
+}
 h2,
 h3 {
     font-family: 'Jost', sans-serif;
     font-weight: 400;
     line-height: var(--line-height-small);
-    color: var(--brown);
+    color: var(--black);
 }
 
 .heading-primary {
