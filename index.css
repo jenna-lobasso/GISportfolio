@@ -252,6 +252,7 @@ body:not(.user-is-tabbing) a:focus {
 
 .btn--brown {
     background: var(--brown);
+    color: var(--white);
     transition: all 0.2s;
 }
 
@@ -262,6 +263,7 @@ body:not(.user-is-tabbing) a:focus {
 .btn--brown:hover,
 .btn--brown:focus {
    background: transparent;
+   color: var(--brown)
 }
 
 .link__text {
