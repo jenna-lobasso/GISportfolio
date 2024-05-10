@@ -142,7 +142,7 @@ h3 {
     font-family: 'Jost', sans-serif;
     font-weight: 400;
     line-height: var(--line-height-small);
-    color: var(--brown); /* Change to brown */
+    color: var(--brown);
 }
 
 .work__title::after {
