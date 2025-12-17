@@ -280,14 +280,18 @@ body:not(.user-is-tabbing) a:focus {
     display: none;
 }
 
-.btn--after:hover {
+.btn--after {
+    display: none;
+}
+
+.btn--after:hover,
+.btn--after:focus {
     background: transparent;
-    color: var(--brown)
+    color: var(--brown);
 }
 
 .btn--brown:focus {
-   background: transparent;
-   color: var(--brown)
+   display:none;
 }
 
 .link__text {
@@ -436,7 +440,7 @@ body:not(.user-is-tabbing) a:focus {
 
 .header {
     background-image: none;
-    background-color: #faf9f6;
+    background-color: #5C4033;
     height: 100vh;
     background-size: cover;
     background-position: center;
