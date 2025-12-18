@@ -237,6 +237,7 @@ body:not(.user-is-tabbing) a:focus {
     position: relative;
     display: inline-block;
     padding: 1rem 4.2rem;
+    margin: 10px 0;
     text-decoration: none;
     color: inherit;
     border: 1px solid  var(--brown);
@@ -455,7 +456,7 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .header__text p {
-    margin: 1.5rem 0 3.5rem;
+    margin: 1.5rem 0 1.5rem;
     max-width: var(--container-medium-width);
     font-family: 'Jost', sans-serif;
     font-size: var(--font-size-medium);
