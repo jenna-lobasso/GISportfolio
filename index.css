@@ -399,7 +399,7 @@ h2 {
 .about-title {
     font-size: .8rem;
     color: var(--ink-soft);
-    font-family: var(--font-body); /* or var(--font-pixel) if you want the pixel font */
+    font-family: var(--font-pixel); 
 }
 
 
