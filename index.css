@@ -1161,7 +1161,8 @@ h1 {
 }
 
 
-h3 {
+.about-header h3 {
+    
     color:var(--green);
     font-size:4rem;
     line-height:1;
