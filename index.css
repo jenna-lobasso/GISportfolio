@@ -164,7 +164,7 @@ hr {
     background: var(--window);
     border: 1px solid var(--ink);
     padding: .1rem .8rem;
-    margin: 0 auto;
+    margin: 0;
     font-family: var(--font-pixel);
     font-size: .65rem;
 }
@@ -297,11 +297,10 @@ h2 {
 
     display: flex;
     align-items: center;
+    position: relative;
     gap: .6rem;
-
     height: 4rem;
     padding: 0 .75rem;
-
     background-image: repeating-linear-gradient(
         180deg,
         var(--ink) 0,
@@ -309,9 +308,7 @@ h2 {
         transparent 1px,
         transparent 4px
     );
-
     background-color: var(--paper-dim);
-
     border-bottom: 2px solid var(--ink);
 
 }
@@ -331,11 +328,14 @@ h2 {
 
 .os-title {
 
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    
     background: var(--window);
     border: 1px solid var(--ink);
 
     padding: .1rem .8rem;
-    margin: 0 auto;
 
     font-family: var(--font-pixel);
     font-size: .65rem;
