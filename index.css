@@ -369,7 +369,6 @@ h2 {
 
 
 .about-icon {
-
     width: 56px;
     height: 56px;
 
@@ -377,13 +376,12 @@ h2 {
     align-items: center;
     justify-content: center;
 
-    font-size: 1.8rem;
+    font-size: 3rem; /* bigger emoji */
 
     background: var(--window-alt);
     border: 2px solid var(--ink);
 
     margin-bottom: 1rem;
-
 }
 
 
