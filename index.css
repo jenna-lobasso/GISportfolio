@@ -1,5 +1,430 @@
-:root{--bg:#fffaf1;--accent:#f4c430;--border:#333}
-body{background:var(--bg);font-family:system-ui;padding:40px}
-.window{background:white;border:2px solid var(--border);box-shadow:8px 8px #ddd;max-width:900px;margin:auto}
-.title{background:#d9e8ff;padding:8px;font-weight:bold}
-h1{color:#333}.icons{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;padding:20px}
+:root {
+
+
+--paper:#F4EBDD;
+--ink:#272727;
+--yellow:#E8B923;
+--green:#657153;
+--red:#B55239;
+--blue:#3A6EA5;
+--window:#fffaf0;
+
+
+}
+
+
+* {
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+
+}
+
+
+body {
+
+background:
+linear-gradient(
+90deg,
+rgba(0,0,0,.03) 1px,
+transparent 1px
+),
+var(--paper);
+
+background-size:20px 20px;
+
+color:var(--ink);
+
+font-family:"IBM Plex Mono", monospace;
+
+line-height:1.7;
+
+}
+
+
+
+
+
+.hero {
+
+
+min-height:100vh;
+
+padding:2rem 8%;
+
+background:
+
+linear-gradient(
+rgba(244,235,221,.85),
+rgba(244,235,221,.95)
+),
+
+url(images/philly-header.jpg);
+
+background-size:cover;
+
+background-position:center;
+
+
+}
+
+
+
+.navbar {
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-bottom:5rem;
+
+}
+
+
+
+.logo {
+
+font-weight:bold;
+
+font-size:1.2rem;
+
+}
+
+
+
+.nav-links a {
+
+color:var(--ink);
+
+text-decoration:none;
+
+margin-left:2rem;
+
+}
+
+
+
+.hero-content {
+
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:4rem;
+
+align-items:center;
+
+
+}
+
+
+
+
+
+.terminal {
+
+
+background:#222;
+
+color:#fff;
+
+border-radius:10px;
+
+box-shadow:8px 8px 0 var(--yellow);
+
+
+}
+
+
+
+.terminal-header {
+
+
+background:var(--yellow);
+
+color:#222;
+
+padding:.5rem 1rem;
+
+font-weight:bold;
+
+
+}
+
+
+
+.terminal-body {
+
+
+padding:2rem;
+
+
+}
+
+
+
+.blink {
+
+
+animation:blink 1s infinite;
+
+
+}
+
+
+@keyframes blink {
+
+50% {opacity:0;}
+
+}
+
+
+
+h1 {
+
+
+font-family:"VT323";
+
+font-size:6rem;
+
+color:var(--green);
+
+
+}
+
+
+
+h2 {
+
+
+font-size:2rem;
+
+}
+
+
+
+.button {
+
+
+display:inline-block;
+
+padding:.8rem 1.5rem;
+
+background:var(--yellow);
+
+color:#222;
+
+text-decoration:none;
+
+border:2px solid var(--ink);
+
+box-shadow:4px 4px 0 var(--ink);
+
+margin:.5rem;
+
+
+}
+
+
+
+.button:hover {
+
+
+transform:translate(3px,3px);
+
+box-shadow:1px 1px 0 var(--ink);
+
+
+}
+
+
+.section {
+
+
+padding:5rem 8%;
+
+}
+
+
+
+.section-title {
+
+
+font-family:"VT323";
+
+font-size:4rem;
+
+color:var(--green);
+
+
+}
+
+
+
+
+.project-grid {
+
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+gap:2rem;
+
+
+}
+
+
+
+.project-card {
+
+
+background:var(--window);
+
+border:3px solid var(--ink);
+
+padding:2rem;
+
+box-shadow:6px 6px 0 var(--blue);
+
+
+}
+
+
+
+.project-card img {
+
+
+width:100%;
+
+height:200px;
+
+object-fit:cover;
+
+
+}
+
+
+
+.tag {
+
+
+display:inline-block;
+
+background:var(--yellow);
+
+padding:.2rem .5rem;
+
+margin:.3rem;
+
+font-size:.8rem;
+
+}
+
+
+
+.about-grid {
+
+
+display:grid;
+
+grid-template-columns:300px 1fr;
+
+gap:3rem;
+
+
+}
+
+
+
+.profile {
+
+
+width:100%;
+
+border:5px solid var(--ink);
+
+
+}
+
+
+
+.skills {
+
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:2rem;
+
+
+}
+
+
+.skill-card {
+
+
+border:3px solid var(--ink);
+
+padding:2rem;
+
+background:white;
+
+
+}
+
+
+
+footer {
+
+
+text-align:center;
+
+padding:3rem;
+
+background:var(--ink);
+
+color:white;
+
+
+}
+
+
+
+
+
+@media(max-width:800px){
+
+
+.hero-content,
+.about-grid,
+.navbar{
+
+display:block;
+
+}
+
+
+.nav-links a{
+
+display:block;
+
+margin:1rem 0;
+
+}
+
+
+
+h1{
+
+font-size:4rem;
+
+}
+
+
+}
