@@ -11,12 +11,22 @@
 
 <link rel="stylesheet" href="style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=VT323&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Silkscreen:wght@400;700&family=VT323&display=swap" rel="stylesheet">
 
 </head>
 
 
 <body>
+
+<div class="menubar">
+  <span class="menubar-item menubar-logo">🗺️ JennaOS</span>
+  <span class="menubar-item">File</span>
+  <span class="menubar-item">Edit</span>
+  <span class="menubar-item">View</span>
+  <span class="menubar-item">Go</span>
+  <span class="menubar-item">Window</span>
+  <span class="menubar-status">♊ Gemini season, always &nbsp;·&nbsp; Philadelphia, PA</span>
+</div>
 
 
 <header class="hero">
@@ -40,38 +50,40 @@
 <div class="hero-content">
 
 
-<div class="terminal">
+<div class="about-box os-window">
 
-<div class="terminal-header">
-🟨 GIS_PROFILE.exe
-</div>
+  <div class="os-titlebar">
+    <span class="os-close"></span>
+    <span class="os-title">About This Jenna</span>
+  </div>
 
+  <div class="about-box-body">
 
-<div class="terminal-body">
+    <div class="about-icon">🗺️</div>
 
-<p>C:\GIS\JENNA></p>
+    <h3 class="about-name">Jenna LoBasso</h3>
+    <p class="about-version">JennaOS 7.2.1 — “Gemini Build”</p>
 
-<p>
-Loading cartographer profile...
-</p>
+    <hr>
 
+    <dl class="about-stats">
+      <div><dt>Sign</dt><dd>Gemini ♊</dd></div>
+      <div><dt>Cats</dt><dd>2, unofficial lab assistants</dd></div>
+      <div><dt>Ink</dt><dd>Bugs &amp; American Traditional</dd></div>
+      <div><dt>Now Playing</dt><dd>Horror&nbsp;Movie.app</dd></div>
+      <div><dt>Location</dt><dd>Philadelphia, PA</dd></div>
+      <div><dt>Fluent In</dt><dd>R · Python · SQL · ArcGIS</dd></div>
+    </dl>
 
-<p>
-✓ Philadelphia, PA<br>
-✓ GIS Analyst<br>
-✓ Environmental Geochemist<br>
-✓ Statistics enthusiast<br>
-✓ Map collector<br>
-✓ Cat researcher (unofficial)
-</p>
+    <div class="curiosity-meter">
+      <div class="meter-label">
+        <span>Curiosity used</span>
+        <span>92%</span>
+      </div>
+      <div class="meter-track"><div class="meter-fill"></div></div>
+    </div>
 
-
-<p class="blink">
-READY_
-</p>
-
-
-</div>
+  </div>
 
 </div>
 
@@ -97,16 +109,27 @@ environmental science, statistics, and storytelling.
 </p>
 
 
-<div class="buttons">
-
 <a class="button" href="#projects">
-Explore Maps
+Explore the Map Room →
 </a>
 
 
-<a class="button secondary" href="resume.pdf">
-Resume
-</a>
+<div class="desktop-icons">
+
+  <a class="desktop-icon" href="#projects">
+    <span class="icon-glyph">🗂️</span>
+    <span class="icon-label">Projects</span>
+  </a>
+
+  <a class="desktop-icon" href="resume.pdf">
+    <span class="icon-glyph">📄</span>
+    <span class="icon-label">Resume.pdf</span>
+  </a>
+
+  <a class="desktop-icon" href="#contact">
+    <span class="icon-glyph">✉️</span>
+    <span class="icon-label">Contact.txt</span>
+  </a>
 
 </div>
 
@@ -161,12 +184,12 @@ Selected GIS projects, analyses, and experiments.
 <img src="images/profile.jpg" class="profile">
 
 
-<div>
+<div class="about-text">
 
 
 <p>
 I started my journey studying Environmental Geochemistry,
-where I researched geothermal systems and Earth's natural resources.
+researching geothermal systems and Earth's natural resources.
 A GIS course introduced me to spatial analysis, and I never looked back.
 </p>
 
@@ -183,6 +206,25 @@ American traditional tattoo art, insects, statistics,
 and documenting the strange little patterns hidden in everyday life.
 </p>
 
+
+</div>
+
+
+<div class="facts-window os-window">
+
+  <div class="os-titlebar">
+    <span class="os-close"></span>
+    <span class="os-title">field_kit.txt</span>
+  </div>
+
+  <ul class="facts-list">
+    <li><span class="facts-icon">🎓</span> Env. Geochemistry undergrad — geothermal systems &amp; resource research</li>
+    <li><span class="facts-icon">🐛</span> Tattoo collection: insects, mostly American Traditional</li>
+    <li><span class="facts-icon">😼</span> Two cats, both convinced they run the department</li>
+    <li><span class="facts-icon">🧳</span> Chronically mid-trip-planning</li>
+    <li><span class="facts-icon">🎃</span> Horror movie completionist</li>
+    <li><span class="facts-icon">📊</span> Will talk about statistics unprompted</li>
+  </ul>
 
 </div>
 
@@ -206,7 +248,14 @@ and documenting the strange little patterns hidden in everyday life.
 
 
 
-<div class="skills">
+<div class="skills os-window">
+
+  <div class="os-titlebar">
+    <span class="os-close"></span>
+    <span class="os-title">DATA_CABINET.sys</span>
+  </div>
+
+  <div class="skills-grid">
 
 
 <div class="skill-card">
@@ -255,6 +304,7 @@ Data Visualization
 </div>
 
 
+  </div>
 
 </div>
 
@@ -274,15 +324,27 @@ Data Visualization
 </h2>
 
 
-<p>
-Want to talk maps, data, or weird spatial questions?
-Send a signal.
-</p>
+<div class="contact-window os-window">
 
+  <div class="os-titlebar">
+    <span class="os-close"></span>
+    <span class="os-title">new_message.eml</span>
+  </div>
 
-<a class="button" href="mailto:jennatlobasso@gmail.com">
-EMAIL ME
-</a>
+  <div class="contact-body">
+
+    <p>
+    Want to talk maps, data, or weird spatial questions?
+    Send a signal.
+    </p>
+
+    <a class="button" href="mailto:jennatlobasso@gmail.com">
+    EMAIL ME
+    </a>
+
+  </div>
+
+</div>
 
 
 </section>
@@ -293,7 +355,11 @@ EMAIL ME
 <footer>
 
 <p>
-© Jenna LoBasso | Built with GIS curiosity & too many browser tabs
+© Jenna LoBasso | Built with GIS curiosity &amp; too many browser tabs
+</p>
+
+<p class="footer-system">
+JennaOS 7.2.1 · Est. Philadelphia, PA <span class="blink">_</span>
 </p>
 
 
