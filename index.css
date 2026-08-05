@@ -365,6 +365,16 @@ h2 {
 
 }
 
+.about-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.about-info {
+    display: flex;
+    flex-direction: column;
+}
 
 .about-icon {
     width: 56px;
@@ -387,10 +397,9 @@ h2 {
 }
 
 .about-title {
-    font-size: .8rem;
-    color: var(--ink-soft);
-    font-family: var(--font-body);
-    margin-left: auto;
+    font-size: inherit;
+    color: inherit;
+    font-family: inherit;
 }
 
 
@@ -398,6 +407,7 @@ h2 {
 
     font-size: .8rem;
     color: var(--ink-soft);
+    margin: 0;
 
 }
 
