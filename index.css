@@ -1161,6 +1161,12 @@ h1 {
 }
 
 
+h3 {
+    color:var(--green);
+    font-size:4rem;
+    line-height:1;
+}
+
 
 .about-grid {
 
