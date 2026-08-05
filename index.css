@@ -389,7 +389,8 @@ h2 {
 .about-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
+    width: 100%;
 }
 
 .about-name {
@@ -399,7 +400,8 @@ h2 {
 .about-title {
     font-size: .8rem;
     color: var(--ink-soft);
-    font-family: var(--font-pixel); 
+    font-family: var(--font-body);
+    margin-left: auto;
 }
 
 
