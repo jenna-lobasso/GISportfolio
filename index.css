@@ -369,6 +369,7 @@ h2 {
     display: flex;
     align-items: center;
     gap: 1rem;
+    margin-bottom: 1rem;
 }
 
 .about-info {
@@ -388,8 +389,6 @@ h2 {
 
     background: var(--window-alt);
     border: 2px solid var(--ink);
-
-    margin-bottom: 1rem;
 }
 
 .about-name {
@@ -397,9 +396,9 @@ h2 {
 }
 
 .about-title {
-    font-size: inherit;
-    color: inherit;
-    font-family: inherit;
+    font-size: .8rem;
+    color: var(--ink-soft);
+    font-family: var(--font-body);
 }
 
 
