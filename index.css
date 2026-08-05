@@ -161,11 +161,12 @@ hr {
 
 
 .logo {
-
-    font-weight:bold;
-
-    font-size:1rem;
-
+    background: var(--window);
+    border: 1px solid var(--ink);
+    padding: .1rem .8rem;
+    margin: 0 auto;
+    font-family: var(--font-pixel);
+    font-size: .65rem;
 }
 
 
@@ -203,7 +204,7 @@ hr {
 
     min-height:100vh;
 
-    padding: 0 17% 6rem;
+    padding: 2rem 17% 6rem;
 
     background:
 
