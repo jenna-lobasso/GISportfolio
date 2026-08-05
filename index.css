@@ -316,12 +316,20 @@ h2 {
 
 .os-close {
 
-    width: 11px;
-    height: 11px;
+    width: 14px;
+    height: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     background: var(--window);
     border: 2px solid var(--ink);
-    flex-shrink: 0;
+
+    color: var(--red);
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1;
 
 }
 
