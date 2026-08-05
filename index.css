@@ -386,12 +386,20 @@ h2 {
 }
 
 
+.about-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .about-name {
+    margin: 0;
+}
 
-    font-family: var(--font-pixel);
-    font-size: 1rem;
-    margin-bottom: .35rem;
-
+.about-title {
+    font-size: .8rem;
+    color: var(--ink-soft);
+    font-family: var(--font-body); /* or var(--font-pixel) if you want the pixel font */
 }
 
 
