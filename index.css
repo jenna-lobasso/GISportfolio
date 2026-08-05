@@ -400,7 +400,7 @@ h2 {
 .about-title {
     font-size: .8rem;
     color: var(--ink-soft);
-    font-family: var(--font-body);
+    font-family: var(--font-pixel);
     margin-left: auto;
 }
 
