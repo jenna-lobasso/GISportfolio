@@ -449,6 +449,11 @@ h2 {
 
 }
 
+.about-stats .cat-icons {
+    display: flex;
+    gap: 0.5rem;
+}
+
 
 .curiosity-meter {
 
