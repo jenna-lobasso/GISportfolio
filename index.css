@@ -1,14 +1,23 @@
 :root {
 
     --paper: #F4EBDD;
-    --ink: #272727;
+    --paper-dim: #E8DCC4;
+    --ink: #262220;
+    --ink-soft: #5B534B;
     --yellow: #E8B923;
+    --periwinkle: #7C8FC4;
     --green: #657153;
     --red: #B55239;
     --blue: #3A6EA5;
-    --window: #fffaf0;
+    --window: #FFFDF7;
+    --window-alt: #FBF3E2;
 
     --shadow: 6px 6px 0px var(--ink);
+    --shadow-sm: 3px 3px 0px var(--ink);
+
+    --font-display: "VT323", monospace;
+    --font-pixel: "Silkscreen", monospace;
+    --font-body: "IBM Plex Mono", monospace;
 
 }
 
@@ -44,7 +53,7 @@ body {
 
     color: var(--ink);
 
-    font-family: "IBM Plex Mono", monospace;
+    font-family: var(--font-body);
 
     line-height: 1.7;
 
@@ -54,6 +63,78 @@ body {
 
 a {
     color: inherit;
+}
+
+
+hr {
+    border: none;
+    border-top: 2px dashed var(--ink);
+    margin: 1rem 0;
+}
+
+
+
+/* -----------------------------
+ MENU BAR
+----------------------------- */
+
+
+.menubar {
+
+    display: flex;
+    align-items: center;
+
+    background: var(--window);
+    border-bottom: 2px solid var(--ink);
+
+    padding: .5rem 1.5rem;
+
+    font-family: var(--font-pixel);
+    font-size: .7rem;
+    letter-spacing: .02em;
+
+    position: sticky;
+    top: 0;
+    z-index: 50;
+
+}
+
+
+.menubar-item {
+
+    margin-right: 1.75rem;
+    color: var(--ink-soft);
+
+}
+
+
+.menubar-logo {
+
+    color: var(--ink);
+    font-weight: 700;
+
+}
+
+
+.menubar-status {
+
+    margin-left: auto;
+    color: var(--ink-soft);
+    font-size: .65rem;
+
+}
+
+
+@media (max-width: 700px) {
+
+    .menubar-item:not(.menubar-logo) {
+        display: none;
+    }
+
+    .menubar-status {
+        font-size: .6rem;
+    }
+
 }
 
 
@@ -122,7 +203,7 @@ a {
 
     min-height:100vh;
 
-    padding:0 8%;
+    padding:3rem 8% 6rem;
 
     background:
 
@@ -165,7 +246,7 @@ a {
 
 h1 {
 
-    font-family:"VT323";
+    font-family: var(--font-display);
 
     font-size:6rem;
 
@@ -196,73 +277,292 @@ h2 {
 
 
 
+.intro .button {
+
+    margin-left: 0;
+
+}
+
 
 
 
 
 /* -----------------------------
- TERMINAL WINDOW
+ OS WINDOW CHROME (shared)
 ----------------------------- */
 
 
+.os-window {
 
-.terminal {
+    background: var(--window);
+    border: 3px solid var(--ink);
+    box-shadow: var(--shadow);
+    overflow: hidden;
 
-    background:#202020;
+}
 
-    color:white;
 
-    border:3px solid var(--ink);
+.os-titlebar {
 
-    border-radius:8px;
+    display: flex;
+    align-items: center;
+    gap: .6rem;
 
-    overflow:hidden;
+    height: 2rem;
+    padding: 0 .75rem;
 
-    box-shadow:10px 10px 0 var(--yellow);
+    background-image: repeating-linear-gradient(
+        180deg,
+        var(--ink) 0,
+        var(--ink) 1px,
+        transparent 1px,
+        transparent 4px
+    );
 
+    background-color: var(--paper-dim);
+
+    border-bottom: 2px solid var(--ink);
+
+}
+
+
+.os-close {
+
+    width: 11px;
+    height: 11px;
+
+    background: var(--window);
+    border: 2px solid var(--ink);
+    flex-shrink: 0;
+
+}
+
+
+.os-title {
+
+    background: var(--window);
+    border: 1px solid var(--ink);
+
+    padding: .1rem .8rem;
+    margin: 0 auto;
+
+    font-family: var(--font-pixel);
+    font-size: .65rem;
 
 }
 
 
 
-.terminal-header {
 
-    background:var(--yellow);
 
-    color:var(--ink);
+/* -----------------------------
+ ABOUT THIS JENNA (hero dialog)
+----------------------------- */
 
-    padding:.7rem 1rem;
 
-    font-weight:bold;
+.about-box-body {
+
+    padding: 1.75rem;
+
+}
+
+
+.about-icon {
+
+    width: 56px;
+    height: 56px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.8rem;
+
+    background: var(--window-alt);
+    border: 2px solid var(--ink);
+
+    margin-bottom: 1rem;
+
+}
+
+
+.about-name {
+
+    font-family: var(--font-pixel);
+    font-size: 1rem;
+    margin-bottom: .35rem;
+
+}
+
+
+.about-version {
+
+    font-size: .8rem;
+    color: var(--ink-soft);
+
+}
+
+
+.about-stats {
+
+    display: grid;
+    gap: .6rem;
+
+}
+
+
+.about-stats > div {
+
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+
+    font-size: .85rem;
+
+    border-bottom: 1px dotted var(--ink-soft);
+    padding-bottom: .45rem;
+
+}
+
+
+.about-stats dt {
+
+    color: var(--ink-soft);
+    flex-shrink: 0;
+
+}
+
+
+.about-stats dd {
+
+    text-align: right;
+    font-weight: 600;
+
+}
+
+
+.curiosity-meter {
+
+    margin-top: 1.5rem;
+
+}
+
+
+.meter-label {
+
+    display: flex;
+    justify-content: space-between;
+
+    font-size: .7rem;
+    font-family: var(--font-pixel);
+
+    margin-bottom: .4rem;
+
+}
+
+
+.meter-track {
+
+    height: 14px;
+
+    background: var(--paper-dim);
+    border: 2px solid var(--ink);
+
+    padding: 2px;
+
+}
+
+
+.meter-fill {
+
+    height: 100%;
+    width: 92%;
+
+    background-image: repeating-linear-gradient(
+        90deg,
+        var(--yellow) 0,
+        var(--yellow) 8px,
+        var(--periwinkle) 8px,
+        var(--periwinkle) 16px
+    );
 
 }
 
 
 
-.terminal-body {
 
-    padding:2rem;
 
-    min-height:300px;
+/* -----------------------------
+ DESKTOP ICONS
+----------------------------- */
+
+
+.desktop-icons {
+
+    display: flex;
+    gap: 1.75rem;
+
+    margin-top: 2.5rem;
 
 }
 
 
+.desktop-icon {
 
-.blink {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
 
-    animation:blink 1s infinite;
+    text-decoration: none;
+    text-align: center;
 
 }
 
 
-@keyframes blink {
+.icon-glyph {
 
-    50% {
+    width: 52px;
+    height: 52px;
 
-        opacity:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    }
+    font-size: 1.6rem;
+
+    background: var(--window);
+    border: 2px solid var(--ink);
+    box-shadow: var(--shadow-sm);
+
+}
+
+
+.icon-label {
+
+    font-family: var(--font-pixel);
+    font-size: .62rem;
+
+    padding: .2rem .5rem;
+
+    background: transparent;
+    color: var(--ink);
+
+}
+
+
+.desktop-icon:hover .icon-label {
+
+    background: var(--blue);
+    color: var(--window);
+
+}
+
+
+.desktop-icon:hover .icon-glyph {
+
+    transform: translate(2px,2px);
+    box-shadow: none;
 
 }
 
@@ -293,6 +593,8 @@ h2 {
     box-shadow:4px 4px 0 var(--ink);
 
     margin:.5rem;
+
+    font-weight: 600;
 
     transition:.2s;
 
@@ -345,12 +647,40 @@ h2 {
 .section-title {
 
 
-    font-family:"VT323";
+    font-family: var(--font-display);
 
     font-size:4rem;
 
     color:var(--green);
 
+    display: inline-block;
+
+    position: relative;
+
+    padding-bottom: .6rem;
+
+
+}
+
+
+.section-title::after {
+
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 90px;
+    height: 6px;
+
+    background-image: repeating-linear-gradient(
+        90deg,
+        var(--yellow) 0,
+        var(--yellow) 15px,
+        var(--periwinkle) 15px,
+        var(--periwinkle) 30px
+    );
 
 }
 
@@ -358,7 +688,7 @@ h2 {
 
 .subtitle {
 
-    margin-bottom:3rem;
+    margin:1.5rem 0 3rem;
 
 }
 
@@ -392,14 +722,17 @@ h2 {
 
 .project-card {
 
+    display: flex;
+    flex-direction: column;
 
-    background:var(--window);
+}
 
-    border:3px solid var(--ink);
+
+.project-body {
+
 
     padding:2rem;
 
-    box-shadow:var(--shadow);
 
 }
 
@@ -434,6 +767,14 @@ h2 {
 
 
 
+.tag-row {
+
+    margin-bottom: .5rem;
+
+}
+
+
+
 .tag {
 
 
@@ -445,10 +786,53 @@ h2 {
 
     padding:.25rem .6rem;
 
-    margin:.25rem;
+    margin:.25rem .25rem .25rem 0;
 
-    font-size:.8rem;
+    font-size:.7rem;
 
+    font-family: var(--font-pixel);
+
+
+}
+
+
+.tag-alt {
+
+    background: var(--periwinkle);
+    color: var(--window);
+
+}
+
+
+
+.empty-state .empty-body,
+.error-dialog .error-body {
+
+    padding: 2.5rem 2rem;
+    text-align: center;
+
+}
+
+
+.empty-sub {
+
+    color: var(--ink-soft);
+    font-size: .85rem;
+    margin-top: .5rem;
+
+}
+
+
+.error-dialog {
+
+    grid-column: 1 / -1;
+
+}
+
+
+.empty-state {
+
+    grid-column: 1 / -1;
 
 }
 
@@ -467,11 +851,11 @@ h2 {
 
     display:grid;
 
-    grid-template-columns:300px 1fr;
+    grid-template-columns: 260px 1fr 280px;
 
-    gap:4rem;
+    gap:3rem;
 
-    align-items:center;
+    align-items:start;
 
 
 }
@@ -487,6 +871,49 @@ h2 {
 
     box-shadow:var(--shadow);
 
+}
+
+
+.about-text {
+
+    padding-top: .5rem;
+
+}
+
+
+.facts-window {
+
+    align-self: start;
+
+}
+
+
+.facts-list {
+
+    list-style: none;
+
+    padding: 1.25rem 1.5rem;
+
+    display: grid;
+    gap: 1rem;
+
+    font-size: .85rem;
+
+}
+
+
+.facts-list li {
+
+    display: flex;
+    gap: .6rem;
+    align-items: flex-start;
+
+}
+
+
+.facts-icon {
+
+    flex-shrink: 0;
 
 }
 
@@ -501,7 +928,7 @@ h2 {
 ----------------------------- */
 
 
-.skills {
+.skills-grid {
 
 
     display:grid;
@@ -510,12 +937,11 @@ h2 {
 
     repeat(
         auto-fit,
-        minmax(250px,1fr)
+        minmax(220px,1fr)
     );
 
 
-    gap:2rem;
-
+    gap: 0;
 
 }
 
@@ -524,11 +950,18 @@ h2 {
 .skill-card {
 
 
-    background:white;
-
-    border:3px solid var(--ink);
+    background:var(--window);
 
     padding:2rem;
+
+    border-right: 1px solid var(--paper-dim);
+
+}
+
+
+.skill-card:last-child {
+
+    border-right: none;
 
 }
 
@@ -541,8 +974,66 @@ h2 {
 
     margin-bottom:1rem;
 
+    font-family: var(--font-pixel);
+    font-size: .85rem;
+
 }
 
+
+@media (max-width: 700px) {
+
+    .skill-card {
+
+        border-right: none;
+        border-bottom: 1px solid var(--paper-dim);
+
+    }
+
+    .skill-card:last-child {
+
+        border-bottom: none;
+
+    }
+
+}
+
+
+
+
+
+
+
+/* -----------------------------
+ CONTACT
+----------------------------- */
+
+
+.contact-window {
+
+    max-width: 560px;
+
+}
+
+
+.contact-body {
+
+    padding: 2.25rem;
+
+}
+
+
+.contact-body p {
+
+    margin-bottom: 1rem;
+
+}
+
+
+.contact-body .button {
+
+    margin-left: 0;
+
+}
 
 
 
@@ -570,6 +1061,37 @@ footer {
 }
 
 
+.footer-system {
+
+    font-family: var(--font-pixel);
+    font-size: .65rem;
+
+    color: var(--paper-dim);
+
+    margin-top: 1rem;
+
+}
+
+
+.blink {
+
+    animation:blink 1s infinite;
+
+}
+
+
+@keyframes blink {
+
+    50% {
+
+        opacity:0;
+
+    }
+
+}
+
+
+
 
 
 
@@ -588,6 +1110,19 @@ footer {
 
 }
 
+
+.about-box {
+
+    order: 2;
+
+}
+
+
+.intro {
+
+    order: 1;
+
+}
 
 
 .navbar {
@@ -623,10 +1158,24 @@ h1 {
 }
 
 
+.facts-window {
+
+    max-width: 420px;
+
+}
+
+
 
 .section {
 
     padding:4rem 5%;
+
+}
+
+
+.desktop-icons {
+
+    justify-content: center;
 
 }
 
