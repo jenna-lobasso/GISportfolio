@@ -1,85 +1,79 @@
 :root {
 
+    --paper: #F4EBDD;
+    --ink: #272727;
+    --yellow: #E8B923;
+    --green: #657153;
+    --red: #B55239;
+    --blue: #3A6EA5;
+    --window: #fffaf0;
 
---paper:#F4EBDD;
---ink:#272727;
---yellow:#E8B923;
---green:#657153;
---red:#B55239;
---blue:#3A6EA5;
---window:#fffaf0;
-
+    --shadow: 6px 6px 0px var(--ink);
 
 }
 
 
 * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-margin:0;
-padding:0;
-box-sizing:border-box;
 
+html {
+    scroll-behavior: smooth;
 }
 
 
 body {
 
-background:
-linear-gradient(
-90deg,
-rgba(0,0,0,.03) 1px,
-transparent 1px
-),
-var(--paper);
+    background-color: var(--paper);
 
-background-size:20px 20px;
+    background-image:
+        linear-gradient(
+            rgba(0,0,0,.04) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,.04) 1px,
+            transparent 1px
+        );
 
-color:var(--ink);
+    background-size: 25px 25px;
 
-font-family:"IBM Plex Mono", monospace;
+    color: var(--ink);
 
-line-height:1.7;
+    font-family: "IBM Plex Mono", monospace;
 
+    line-height: 1.7;
+
+}
+
+
+
+a {
+    color: inherit;
 }
 
 
 
 
 
-.hero {
-
-
-min-height:100vh;
-
-padding:2rem 8%;
-
-background:
-
-linear-gradient(
-rgba(244,235,221,.85),
-rgba(244,235,221,.95)
-),
-
-url(images/philly-header.jpg);
-
-background-size:cover;
-
-background-position:center;
-
-
-}
-
+/* -----------------------------
+ NAVIGATION
+----------------------------- */
 
 
 .navbar {
 
-display:flex;
+    display:flex;
 
-justify-content:space-between;
+    justify-content:space-between;
 
-align-items:center;
+    align-items:center;
 
-margin-bottom:5rem;
+    padding:2rem 0;
 
 }
 
@@ -87,9 +81,9 @@ margin-bottom:5rem;
 
 .logo {
 
-font-weight:bold;
+    font-weight:bold;
 
-font-size:1.2rem;
+    font-size:1.2rem;
 
 }
 
@@ -97,101 +91,87 @@ font-size:1.2rem;
 
 .nav-links a {
 
-color:var(--ink);
+    margin-left:2rem;
 
-text-decoration:none;
+    text-decoration:none;
 
-margin-left:2rem;
+    border-bottom:2px solid transparent;
 
 }
+
+
+.nav-links a:hover {
+
+    border-bottom:2px solid var(--yellow);
+
+}
+
+
+
+
+
+
+
+/* -----------------------------
+ HERO
+----------------------------- */
+
+
+.hero {
+
+
+    min-height:100vh;
+
+    padding:0 8%;
+
+    background:
+
+    linear-gradient(
+        rgba(244,235,221,.85),
+        rgba(244,235,221,.95)
+    ),
+
+    url(images/philly-header.jpg);
+
+
+    background-size:cover;
+
+    background-position:center;
+
+
+}
+
+
 
 
 
 .hero-content {
 
 
-display:grid;
+    display:grid;
 
-grid-template-columns:1fr 1fr;
+    grid-template-columns:1fr 1fr;
 
-gap:4rem;
+    gap:5rem;
 
-align-items:center;
-
-
-}
-
-
-
-
-
-.terminal {
-
-
-background:#222;
-
-color:#fff;
-
-border-radius:10px;
-
-box-shadow:8px 8px 0 var(--yellow);
+    align-items:center;
 
 
 }
 
 
-
-.terminal-header {
-
-
-background:var(--yellow);
-
-color:#222;
-
-padding:.5rem 1rem;
-
-font-weight:bold;
-
-
-}
-
-
-
-.terminal-body {
-
-
-padding:2rem;
-
-
-}
-
-
-
-.blink {
-
-
-animation:blink 1s infinite;
-
-
-}
-
-
-@keyframes blink {
-
-50% {opacity:0;}
-
-}
 
 
 
 h1 {
 
+    font-family:"VT323";
 
-font-family:"VT323";
+    font-size:6rem;
 
-font-size:6rem;
+    color:var(--green);
 
-color:var(--green);
+    line-height:1;
 
 
 }
@@ -200,31 +180,121 @@ color:var(--green);
 
 h2 {
 
-
-font-size:2rem;
+    font-weight:600;
 
 }
 
 
 
+.intro p {
+
+    margin:2rem 0;
+
+    max-width:600px;
+
+}
+
+
+
+
+
+
+
+/* -----------------------------
+ TERMINAL WINDOW
+----------------------------- */
+
+
+
+.terminal {
+
+    background:#202020;
+
+    color:white;
+
+    border:3px solid var(--ink);
+
+    border-radius:8px;
+
+    overflow:hidden;
+
+    box-shadow:10px 10px 0 var(--yellow);
+
+
+}
+
+
+
+.terminal-header {
+
+    background:var(--yellow);
+
+    color:var(--ink);
+
+    padding:.7rem 1rem;
+
+    font-weight:bold;
+
+}
+
+
+
+.terminal-body {
+
+    padding:2rem;
+
+    min-height:300px;
+
+}
+
+
+
+.blink {
+
+    animation:blink 1s infinite;
+
+}
+
+
+@keyframes blink {
+
+    50% {
+
+        opacity:0;
+
+    }
+
+}
+
+
+
+
+
+/* -----------------------------
+ BUTTONS
+----------------------------- */
+
+
 .button {
 
 
-display:inline-block;
+    display:inline-block;
 
-padding:.8rem 1.5rem;
+    padding:.8rem 1.5rem;
 
-background:var(--yellow);
+    background:var(--yellow);
 
-color:#222;
+    color:var(--ink);
 
-text-decoration:none;
+    text-decoration:none;
 
-border:2px solid var(--ink);
+    border:2px solid var(--ink);
 
-box-shadow:4px 4px 0 var(--ink);
+    box-shadow:4px 4px 0 var(--ink);
 
-margin:.5rem;
+    margin:.5rem;
+
+    transition:.2s;
 
 
 }
@@ -234,18 +304,39 @@ margin:.5rem;
 .button:hover {
 
 
-transform:translate(3px,3px);
+    transform:translate(4px,4px);
 
-box-shadow:1px 1px 0 var(--ink);
+    box-shadow:none;
 
 
 }
 
 
+
+.secondary {
+
+
+    background:white;
+
+
+}
+
+
+
+
+
+
+/* -----------------------------
+ SECTIONS
+----------------------------- */
+
+
+
 .section {
 
 
-padding:5rem 8%;
+    padding:6rem 8%;
+
 
 }
 
@@ -254,26 +345,45 @@ padding:5rem 8%;
 .section-title {
 
 
-font-family:"VT323";
+    font-family:"VT323";
 
-font-size:4rem;
+    font-size:4rem;
 
-color:var(--green);
+    color:var(--green);
 
 
 }
 
 
 
+.subtitle {
+
+    margin-bottom:3rem;
+
+}
+
+
+
+
+
+/* -----------------------------
+ PROJECT CARDS
+----------------------------- */
+
 
 .project-grid {
 
 
-display:grid;
+    display:grid;
 
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    grid-template-columns:
 
-gap:2rem;
+    repeat(
+        auto-fit,
+        minmax(300px,1fr)
+    );
+
+    gap:3rem;
 
 
 }
@@ -283,14 +393,13 @@ gap:2rem;
 .project-card {
 
 
-background:var(--window);
+    background:var(--window);
 
-border:3px solid var(--ink);
+    border:3px solid var(--ink);
 
-padding:2rem;
+    padding:2rem;
 
-box-shadow:6px 6px 0 var(--blue);
-
+    box-shadow:var(--shadow);
 
 }
 
@@ -299,12 +408,27 @@ box-shadow:6px 6px 0 var(--blue);
 .project-card img {
 
 
-width:100%;
+    width:100%;
 
-height:200px;
+    height:220px;
 
-object-fit:cover;
+    object-fit:cover;
 
+    border:2px solid var(--ink);
+
+    margin-bottom:1rem;
+
+
+}
+
+
+
+.project-card h3 {
+
+
+    color:var(--green);
+
+    margin-bottom:1rem;
 
 }
 
@@ -313,28 +437,41 @@ object-fit:cover;
 .tag {
 
 
-display:inline-block;
+    display:inline-block;
 
-background:var(--yellow);
+    background:var(--yellow);
 
-padding:.2rem .5rem;
+    border:1px solid var(--ink);
 
-margin:.3rem;
+    padding:.25rem .6rem;
 
-font-size:.8rem;
+    margin:.25rem;
+
+    font-size:.8rem;
+
 
 }
 
 
 
+
+
+
+/* -----------------------------
+ ABOUT
+----------------------------- */
+
+
 .about-grid {
 
 
-display:grid;
+    display:grid;
 
-grid-template-columns:300px 1fr;
+    grid-template-columns:300px 1fr;
 
-gap:3rem;
+    gap:4rem;
+
+    align-items:center;
 
 
 }
@@ -344,52 +481,90 @@ gap:3rem;
 .profile {
 
 
-width:100%;
+    width:100%;
 
-border:5px solid var(--ink);
+    border:5px solid var(--ink);
+
+    box-shadow:var(--shadow);
 
 
 }
 
+
+
+
+
+
+
+/* -----------------------------
+ SKILLS
+----------------------------- */
 
 
 .skills {
 
 
-display:grid;
+    display:grid;
 
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns:
 
-gap:2rem;
+    repeat(
+        auto-fit,
+        minmax(250px,1fr)
+    );
+
+
+    gap:2rem;
 
 
 }
+
 
 
 .skill-card {
 
 
-border:3px solid var(--ink);
+    background:white;
 
-padding:2rem;
+    border:3px solid var(--ink);
 
-background:white;
-
+    padding:2rem;
 
 }
 
+
+
+.skill-card h3 {
+
+
+    color:var(--blue);
+
+    margin-bottom:1rem;
+
+}
+
+
+
+
+
+
+
+
+/* -----------------------------
+ FOOTER
+----------------------------- */
 
 
 footer {
 
 
-text-align:center;
+    background:var(--ink);
 
-padding:3rem;
+    color:white;
 
-background:var(--ink);
+    padding:3rem;
 
-color:white;
+    text-align:center;
 
 
 }
@@ -398,31 +573,60 @@ color:white;
 
 
 
-@media(max-width:800px){
+
+/* -----------------------------
+ MOBILE
+----------------------------- */
 
 
-.hero-content,
-.about-grid,
-.navbar{
-
-display:block;
-
-}
+@media(max-width:900px){
 
 
-.nav-links a{
+.hero-content {
 
-display:block;
-
-margin:1rem 0;
+    grid-template-columns:1fr;
 
 }
 
 
 
-h1{
+.navbar {
 
-font-size:4rem;
+    display:block;
+
+}
+
+
+
+.nav-links a {
+
+    display:block;
+
+    margin:1rem 0;
+
+}
+
+
+
+h1 {
+
+    font-size:4rem;
+
+}
+
+
+
+.about-grid {
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.section {
+
+    padding:4rem 5%;
 
 }
 
