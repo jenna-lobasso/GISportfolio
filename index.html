@@ -18,15 +18,68 @@
 
 <body>
 
-<div class="menubar">
-  <span class="menubar-item menubar-logo">🗺️ JennaOS</span>
-  <span class="menubar-item">File</span>
-  <span class="menubar-item">Edit</span>
-  <span class="menubar-item">View</span>
-  <span class="menubar-item">Go</span>
-  <span class="menubar-item">Window</span>
-  <span class="menubar-status">Philadelphia, PA</span>
+<div class="desktop-window">
+  <div class="menubar" id="menubar">
+    <span class="menubar-item menubar-logo">🗺️ JennaOS</span>
+
+    <span class="menubar-item has-menu" data-menu="file">
+      File
+      <div class="dropdown" role="menu">
+        <div class="dropdown-item" data-action="goto:projects"><span class="icon">📁</span>New Project<span class="shortcut">Ctrl+N</span></div>
+        <div class="dropdown-item" data-action="goto:resume"><span class="icon">📄</span>Open Resume.pdf<span class="shortcut">Ctrl+O</span></div>
+        <div class="dropdown-item" data-action="print"><span class="icon">🖨️</span>Print...<span class="shortcut">Ctrl+P</span></div>
+        <div class="dropdown-sep"></div>
+        <div class="dropdown-item" data-action="goto:home"><span class="icon">🚪</span>Exit<span class="shortcut">Alt+F4</span></div>
+      </div>
+    </span>
+
+    <span class="menubar-item has-menu" data-menu="edit">
+      Edit
+      <div class="dropdown" role="menu">
+        <div class="dropdown-item disabled"><span class="icon"></span>Undo<span class="shortcut">Ctrl+Z</span></div>
+        <div class="dropdown-sep"></div>
+        <div class="dropdown-item" data-action="copyEmail"><span class="icon">📋</span>Copy Email Address<span class="shortcut">Ctrl+C</span></div>
+        <div class="dropdown-sep"></div>
+        <div class="dropdown-item" data-action="goto:about"><span class="icon">⚙️</span>Preferences (About Me)</div>
+      </div>
+    </span>
+
+    <span class="menubar-item has-menu" data-menu="view">
+      View
+      <div class="dropdown" role="menu">
+        <div class="dropdown-item" data-action="goto:skills"><span class="icon">📊</span>Skills.txt</div>
+        <div class="dropdown-item" data-action="toggleTheme"><span class="icon">🌓</span>Toggle Theme</div>
+        <div class="dropdown-sep"></div>
+        <div class="dropdown-item" data-action="fullscreen"><span class="icon">🖥️</span>Full Screen<span class="shortcut">F11</span></div>
+      </div>
+    </span>
+
+    <span class="menubar-item has-menu" data-menu="go">
+      Go
+      <div class="dropdown" role="menu">
+        <div class="dropdown-item" data-action="goto:home"><span class="icon">🏠</span>Home</div>
+        <div class="dropdown-item" data-action="goto:about"><span class="icon">👤</span>About</div>
+        <div class="dropdown-item" data-action="goto:projects"><span class="icon">📁</span>Projects</div>
+        <div class="dropdown-item" data-action="goto:contact"><span class="icon">✉️</span>Contact</div>
+      </div>
+    </span>
+
+    <span class="menubar-item has-menu" data-menu="window">
+      Window
+      <div class="dropdown" role="menu">
+        <div class="dropdown-item" data-action="goto:testimonials"><span class="icon">💬</span>Testimonials</div>
+        <div class="dropdown-item disabled"><span class="icon"></span>Cascade</div>
+        <div class="dropdown-item disabled"><span class="icon"></span>Tile Windows</div>
+        <div class="dropdown-sep"></div>
+        <div class="dropdown-item" data-action="minimize"><span class="icon">🗕</span>Minimize All</div>
+      </div>
+    </span>
+
+    <span class="menubar-status" id="statusText">Philadelphia, PA</span>
+  </div>
 </div>
+
+<div class="win-toast" id="toast"></div>
 
 
 <header class="hero">
