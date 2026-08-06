@@ -222,65 +222,37 @@
 
 
 <div class="skills os-window">
-
   <div class="os-titlebar">
     <span class="os-close"></span>
     <span class="os-title">DATA_CABINET.sys</span>
   </div>
 
-  <div class="skills-grid">
-
-
-<div class="skill-card">
-
-<h3>GIS</h3>
-
-<p>
-ArcGIS Pro<br>
-QGIS<br>
-Spatial Analysis<br>
-Cartography<br>
-StoryMaps
-</p>
-
-</div>
-
-
-
-<div class="skill-card">
-
-<h3>Code</h3>
-
-<p>
-R<br>
-Python<br>
-SQL<br>
-JavaScript<br>
-HTML/CSS
-</p>
-
-</div>
-
-
-
-<div class="skill-card">
-
-<h3>Research</h3>
-
-<p>
-Statistics<br>
-Environmental Science<br>
-Remote Sensing<br>
-Data Visualization
-</p>
-
-</div>
-
-
+  <div class="os-loading" id="skillsLoading">
+    <div class="os-loading-row">
+      <span id="loadingText">Reading skill index...</span>
+      <span id="loadingPercent">0%</span>
+    </div>
+    <div class="os-progress">
+      <div class="os-progress-fill" id="progressFill"></div>
+    </div>
+    <div class="os-loading-detail" id="loadingDetail">0 KB of 1,024 KB copied</div>
   </div>
 
+  <div class="skills-grid" id="skillsGrid" hidden>
+    <div class="skill-card">
+      <h3>GIS</h3>
+      <p>ArcGIS Pro<br>QGIS<br>Spatial Analysis<br>Cartography<br>StoryMaps</p>
+    </div>
+    <div class="skill-card">
+      <h3>Code</h3>
+      <p>R<br>Python<br>SQL<br>JavaScript<br>HTML/CSS</p>
+    </div>
+    <div class="skill-card">
+      <h3>Research</h3>
+      <p>Statistics<br>Environmental Science<br>Remote Sensing<br>Data Visualization</p>
+    </div>
+  </div>
 </div>
-
 
 </section>
 
