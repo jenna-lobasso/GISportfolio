@@ -95,3 +95,49 @@ menubar.addEventListener('click', (e) => {
 
   closeAll();
 });
+
+
+// --- Fake "loading" bar for skills ---
+(function loadSkills() {
+  const fill = document.getElementById('progressFill');
+  const percentEl = document.getElementById('loadingPercent');
+  const textEl = document.getElementById('loadingText');
+  const detailEl = document.getElementById('loadingDetail');
+  const loadingBox = document.getElementById('skillsLoading');
+  const grid = document.getElementById('skillsGrid');
+
+  const totalKB = 1024;
+  let percent = 0;
+
+  const messages = [
+    { at: 0,  text: 'Reading skill index...' },
+    { at: 25, text: 'Indexing GIS modules...' },
+    { at: 55, text: 'Compiling code libraries...' },
+    { at: 80, text: 'Cross-referencing research data...' },
+    { at: 97, text: 'Finalizing DATA_CABINET.sys...' },
+  ];
+
+  function tick() {
+    // uneven "jumpy" increments, like a real fake installer
+    percent += Math.random() < 0.15 ? 0 : Math.floor(Math.random() * 9) + 2;
+    if (percent > 100) percent = 100;
+
+    fill.style.width = percent + '%';
+    percentEl.textContent = percent + '%';
+    detailEl.textContent = `${Math.floor((percent / 100) * totalKB)} KB of ${totalKB} KB copied`;
+
+    const msg = [...messages].reverse().find(m => percent >= m.at);
+    if (msg) textEl.textContent = msg.text;
+
+    if (percent < 100) {
+      setTimeout(tick, Math.random() * 180 + 60);
+    } else {
+      setTimeout(() => {
+        loadingBox.hidden = true;
+        grid.hidden = false;
+      }, 300);
+    }
+  }
+
+  tick();
+})();
