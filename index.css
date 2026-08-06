@@ -1090,22 +1090,10 @@ h2 {
 
 
 .skills-grid {
-
-
-    display:grid;
-
-    grid-template-columns:
-
-    repeat(
-        auto-fit,
-        minmax(220px,1fr)
-
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     animation: snapIn 0.18s ease-out;
-    );
-
-
     gap: 0;
-
 }
 
 
