@@ -78,51 +78,68 @@ hr {
  MENU BAR
 ----------------------------- */
 
+.desktop-window {
+    width: 100%;
+    max-width: 640px;
+  }
 
 .menubar {
-
+    position: relative;
     display: flex;
     align-items: center;
-
-    background: var(--window);
-    border-bottom: 2px solid var(--ink);
-
-    padding: .5rem 1.5rem;
-
-    font-family: var(--font-pixel);
-    font-size: .7rem;
-    letter-spacing: .02em;
-
-    position: sticky;
-    top: 0;
-    z-index: 50;
-
-}
+    background: var(--face);
+    border-top: 1px solid var(--highlight);
+    border-left: 1px solid var(--highlight);
+    border-right: 1px solid var(--shadow-dark);
+    border-bottom: 1px solid var(--shadow-dark);
+    padding: 2px 3px;
+    font-size: 13px;
+    user-select: none;
+  }
 
 
 .menubar-item {
+    position: relative;
+    padding: 3px 8px;
+    margin-right: 1px;
+    color: var(--text);
+    cursor: default;
+    border: 1px solid transparent;
+  }
 
-    margin-right: 1.75rem;
-    color: var(--ink-soft);
+.menubar-item.menubar-logo {
+    font-weight: bold;
+    padding-right: 14px;
+    margin-right: 6px;
+    border-right: 1px solid var(--shadow);
+    cursor: default;
+  }
 
-}
+.menubar-item.has-menu:hover,
+  .menubar-item.has-menu.active {
+    background: var(--select-bg);
+    color: #fff;
+  }
 
-
-.menubar-logo {
-
-    color: var(--ink);
-    font-weight: 700;
-
-}
+.menubar-item.has-menu.active {
+    border-top: 1px solid var(--shadow-dark);
+    border-left: 1px solid var(--shadow-dark);
+    border-right: 1px solid var(--highlight);
+    border-bottom: 1px solid var(--highlight);
+  }
 
 
 .menubar-status {
-
     margin-left: auto;
-    color: var(--ink-soft);
-    font-size: .65rem;
-
-}
+    padding: 2px 10px;
+    font-size: 12px;
+    color: var(--text);
+    border-top: 1px solid var(--shadow);
+    border-left: 1px solid var(--shadow);
+    border-right: 1px solid var(--highlight);
+    border-bottom: 1px solid var(--highlight);
+    background: var(--highlight-soft);
+  }
 
 
 @media (max-width: 700px) {
@@ -138,7 +155,97 @@ hr {
 }
 
 
+/* ===== DROPDOWN ===== */
+  .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 210px;
+    background: var(--face);
+    border-top: 1px solid var(--highlight);
+    border-left: 1px solid var(--highlight);
+    border-right: 1px solid var(--shadow-dark);
+    border-bottom: 1px solid var(--shadow-dark);
+    box-shadow: 3px 3px 0 rgba(0,0,0,0.35);
+    padding: 2px;
+    z-index: 100;
+  }
 
+.menubar-item.active .dropdown {
+    display: block;
+  }
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 4px 10px 4px 22px;
+    font-size: 13px;
+    color: var(--text);
+    cursor: default;
+    position: relative;
+    white-space: nowrap;
+  }
+
+.dropdown-item .icon {
+    position: absolute;
+    left: 4px;
+    font-size: 12px;
+  }
+
+  .dropdown-item .shortcut {
+    font-size: 11px;
+    color: var(--disabled);
+  }
+
+  .dropdown-item:not(.disabled):hover {
+    background: var(--select-bg);
+    color: #fff;
+  }
+
+  .dropdown-item:not(.disabled):hover .shortcut {
+    color: #dcdcdc;
+  }
+
+  .dropdown-item.disabled {
+    color: var(--disabled);
+    text-shadow: 1px 1px 0 var(--highlight);
+    cursor: not-allowed;
+  }
+
+  .dropdown-sep {
+    height: 1px;
+    margin: 3px 2px;
+    border-top: 1px solid var(--shadow);
+    border-bottom: 1px solid var(--highlight);
+  }
+
+  /* toast for "copied" feedback */
+  .win-toast {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: var(--face);
+    border-top: 1px solid var(--highlight);
+    border-left: 1px solid var(--highlight);
+    border-right: 1px solid var(--shadow-dark);
+    border-bottom: 1px solid var(--shadow-dark);
+    box-shadow: 3px 3px 0 rgba(0,0,0,0.35);
+    padding: 8px 14px;
+    font-size: 12px;
+    color: var(--text);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s ease, transform 0.15s ease;
+    z-index: 200;
+  }
+  .win-toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
 
 
 /* -----------------------------
